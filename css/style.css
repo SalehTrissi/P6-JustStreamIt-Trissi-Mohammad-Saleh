@@ -1,0 +1,300 @@
+.m-1 {
+  margin: 10px;
+}
+
+.my-1 {
+  margin: 10px 0;
+}
+
+.mx-1 {
+  margin: 0 10px;
+}
+
+.p-1 {
+  margin: 10px;
+}
+
+.py-1 {
+  margin: 10px 0;
+}
+
+.py-1 {
+  margin: 0 10px;
+}
+
+.m-2 {
+  margin: 20px;
+}
+
+.my-2 {
+  margin: 20px 0;
+}
+
+.mx-2 {
+  margin: 0 20px;
+}
+
+.p-2 {
+  margin: 20px;
+}
+
+.py-2 {
+  margin: 20px 0;
+}
+
+.py-2 {
+  margin: 0 20px;
+}
+
+.m-3 {
+  margin: 30px;
+}
+
+.my-3 {
+  margin: 30px 0;
+}
+
+.mx-3 {
+  margin: 0 30px;
+}
+
+.p-3 {
+  margin: 30px;
+}
+
+.py-3 {
+  margin: 30px 0;
+}
+
+.py-3 {
+  margin: 0 30px;
+}
+
+.m-4 {
+  margin: 40px;
+}
+
+.my-4 {
+  margin: 40px 0;
+}
+
+.mx-4 {
+  margin: 0 40px;
+}
+
+.p-4 {
+  margin: 40px;
+}
+
+.py-4 {
+  margin: 40px 0;
+}
+
+.py-4 {
+  margin: 0 40px;
+}
+
+.m-5 {
+  margin: 50px;
+}
+
+.my-5 {
+  margin: 50px 0;
+}
+
+.mx-5 {
+  margin: 0 50px;
+}
+
+.p-5 {
+  margin: 50px;
+}
+
+.py-5 {
+  margin: 50px 0;
+}
+
+.py-5 {
+  margin: 0 50px;
+}
+
+.m-6 {
+  margin: 60px;
+}
+
+.my-6 {
+  margin: 60px 0;
+}
+
+.mx-6 {
+  margin: 0 60px;
+}
+
+.p-6 {
+  margin: 60px;
+}
+
+.py-6 {
+  margin: 60px 0;
+}
+
+.py-6 {
+  margin: 0 60px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.button .btn-nav, .btn-secondary, .btn-primary {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+.btn-primary {
+  background-color: #ffa600; /* Set primary button background color */
+}
+
+.btn-secondary {
+  background-color: rgb(229, 9, 20); /* Set secondary button background color */
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: #6a6565; /* Lighten the background color on hover */
+  /* Adjust the percentage value as desired for the hover effect */
+}
+
+.button .btn-nav {
+  background-color: rgb(229, 9, 20);
+  padding: 15px;
+  cursor: pointer;
+}
+.button .btn-nav:hover {
+  background-color: #6a6565; /* Lighten the background color on hover */
+}
+
+#close-modal-btn {
+  background-color: rgb(229, 9, 20);
+  cursor: pointer;
+  margin: 10px auto 0px auto; /* Center horizontally */
+  display: block; /* Make it a block element */
+  width: 150px; /* Set a fixed width if desired */
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+#close-modal-btn:hover {
+  background-color: #6a6565; /* Lighten the background color on hover */
+}
+
+.showcase-content, .header-menu nav {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  background-color: #00081d;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-menu nav {
+  justify-content: space-between;
+}
+.header-menu nav img {
+  width: 30%;
+  filter: invert(13%) sepia(96%) saturate(4973%) hue-rotate(351deg) brightness(88%) contrast(106%);
+}
+.header-menu nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.showcase {
+  height: 450px;
+  margin: 0px 60px;
+  padding: 15px 25px;
+}
+.showcase-content {
+  margin-top: 10px;
+  height: 100%;
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 25px;
+  background-image: radial-gradient(93.75% 105.88% at 0.39% 99.26%, rgba(150, 1, 7, 0.4) 1.42%, rgba(30, 1, 66, 0.51) 53.8%, rgba(13, 14, 32, 0) 100%), linear-gradient(98.24deg, #1d0005 14.75%, rgba(0, 8, 29, 0.48) 100%), url("/img/background-img.jpg");
+}
+.showcase .titre-button {
+  width: 60%;
+}
+.showcase img {
+  width: 100%;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal-content {
+  background: rgb(68, 69, 69);
+  background: linear-gradient(90deg, rgb(68, 69, 69) 0%, rgb(18, 16, 16) 60%, rgb(68, 69, 69) 100%);
+  border-radius: 10px;
+  margin: 6% auto;
+  max-width: 1500px;
+  min-height: 350px;
+  padding: 30px 30px 60px 30px;
+  width: 80%;
+  display: flex; /* Use flexbox for content layout */
+}
+.modal-content h2 {
+  font-size: 24px;
+  text-align: center;
+}
+.modal-content .modal-info-center {
+  text-align: center;
+  font-weight: bolder;
+}
+.modal-content .modal-cover-image img {
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  height: 340px;
+  margin-left: 0; /* Reset margin */
+  margin-top: 1%;
+  width: auto; /* Adjusted width */
+}
+.modal-content .modal-info {
+  font-size: 15px;
+  margin-left: 30px;
+  flex: 1; /* Take remaining space */
+}
+.modal-content p {
+  display: inline;
+  line-height: 150%;
+}
+.modal-content strong {
+  font-size: large;
+  color: #caaa76;
+}
+.modal-content p#modal-summary {
+  font-style: italic;
+}/*# sourceMappingURL=style.css.map */
