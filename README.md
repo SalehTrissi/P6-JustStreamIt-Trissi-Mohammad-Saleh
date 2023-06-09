@@ -39,6 +39,6 @@ To access the page, open the `index.html` file in any web browser.
 
 ## Resources and Credits
 
-- [Background photo](https://assets.nflxext.com/ffe/siteui/vlv3/70805ddd-f38c-4e25-94cd-b5015e444ee0/f88936a8-e6e7-4813-a16e-e405d8d71a45/FR-fr-20230508-popsignuptwoweeks-perspective_alpha_website_large.jpg) by _cottonbro_ from Pexels
+- [Background photo](https://assets.nflxext.com/ffe/siteui/vlv3/70805ddd-f38c-4e25-94cd-b5015e444ee0/f88936a8-e6e7-4813-a16e-e405d8d71a45/FR-fr-20230508-popsignuptwoweeks-perspective_alpha_website_large.jpg) from _NETFLIX_
 - [Bootstrap](https://icons.getbootstrap.com) icons
 - _JustStreamIt_ logo provided by OpenClassrooms
