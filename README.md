@@ -2,8 +2,7 @@
 
 <!--suppress HtmlUnknownAnchorTarget -->
 <p align="center">
-  <img src="img/logo_light.png#gh-light-mode-only" alt="logo-light" />
-  <img src="img/logo_dark.png#gh-dark-mode-only" alt="logo-dark" />
+  <img src="img/logo-JustStreamIt.png" alt="logo-JustStreamIt" />
 </p>
 
 # About the project
