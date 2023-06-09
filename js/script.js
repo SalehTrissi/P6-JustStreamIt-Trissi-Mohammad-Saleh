@@ -286,7 +286,8 @@ async function buildCarousel(category, index, moviesData) {
         card.append(img);
         card.append(content);
         content.append(h2);
-
+        // Append the card to the inner
+        inner.append(card);
         buttonDiv.appendChild(moreInfoBtn);
         card.appendChild(buttonDiv);
 
@@ -298,12 +299,17 @@ async function buildCarousel(category, index, moviesData) {
             buttonDiv.style.display = "none";
         });
 
-        // Determine the section and arrow buttons based on the card index
+        // Add the section and arrow buttons based on the card index
         if (i < 4) {
             // For the first four cards
             if (!section1) {
                 section1 = document.createElement("section"); // Create section1 if it doesn't exist
                 section1.id = sectionId1;
+                const arrowBtn1 = document.createElement("a");
+                arrowBtn1.href = `#${sectionId2}`;
+                arrowBtn1.classList.add("arrow__btn");
+                // arrowBtn1.textContent = "‹";
+                section1.appendChild(arrowBtn1);
                 inner.insertBefore(section1, inner.firstChild); // Insert as the first child of inner
             }
             section1.appendChild(card); // Append the card to section1
@@ -329,18 +335,40 @@ async function buildCarousel(category, index, moviesData) {
             }
         }
     }
+
+    // Function to create an arrow button with the specified target section ID
+    function createArrowButton(targetSectionId) {
+        const arrowBtn = document.createElement("a");
+        arrowBtn.href = `#${targetSectionId}`;
+        arrowBtn.classList.add("arrow__btn");
+        arrowBtn.textContent = "›";
+        arrowBtn.setAttribute("onclick", "return false"); // Add onclick="return false"
+        arrowBtn.id = `arrowBtn-${targetSectionId}`;
+
+        // Add event listener to the arrow button
+        arrowBtn.addEventListener("click", () => {
+            document.getElementById(targetSectionId).scrollIntoView({ behavior: "smooth" });
+        });
+
+        return arrowBtn;
+    }
+
+    // Create the back button
+    const backBtn = document.createElement("a");
+    backBtn.href = `#${sectionId1}`;
+    backBtn.classList.add("arrow__btn");
+    backBtn.textContent = "‹";
+    backBtn.setAttribute("onclick", "return false"); // Add onclick="return false"
+    backBtn.id = `backBtn-${sectionId2}`;
+
+    // Add event listener to the back button
+    backBtn.addEventListener("click", () => {
+        document.getElementById(sectionId1).scrollIntoView({ behavior: "smooth" });
+    });
+
+    section2.insertBefore(backBtn, section2.firstChild); // Insert the back button as the first child of section2
 }
 
-// Function to create an arrow button with the specified target section ID
-function createArrowButton(targetSectionId) {
-    const arrowBtn = document.createElement("a");
-    arrowBtn.href = `#${targetSectionId}`;
-    arrowBtn.classList.add("arrow__btn");
-    arrowBtn.textContent = "›";
-    arrowBtn.setAttribute("onclick", "return false"); // Add onclick="return false"
-    arrowBtn.id = `arrowBtn-${targetSectionId}`;
-    return arrowBtn;
-}
 
 // Function to display the carousels on the page
 async function displayCarousels() {
@@ -363,8 +391,6 @@ async function displayCarousels() {
         console.error(error);
     }
 }
-
-
 
 // Call the function to fetch the data for the best movie and set up the modal
 displayCarousels();
