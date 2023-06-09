@@ -143,5 +143,8 @@ Desktop.ini
 
 
 ### Sass ###
+*.sass
 .sass-cache/
-*.css.map
+*.css.ma
+*.sass.map
+*.scss.map
