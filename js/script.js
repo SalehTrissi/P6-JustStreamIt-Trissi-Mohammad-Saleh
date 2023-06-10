@@ -34,41 +34,6 @@ async function getDataBestMovie() {
     }
 }
 
-function openModal(id) {
-    // Get the modal element
-    const modal = document.getElementById('modal');
-    modal.style.display = 'block'; // Show the modal
-
-    // Store the current scroll position
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
-    // Get the close buttons
-    const closeButton = document.getElementById('close-modal-btn');
-
-    // Fetch modal data by id
-    fetchModalDataById(id);
-
-    // Function to close the modal
-    const closeModal = () => {
-        modal.style.display = 'none'; // Hide the modal
-
-        // Restore the previous scroll position
-        window.scrollTo(0, scrollPosition);
-    };
-
-    // Event listener for the close button
-    closeButton.addEventListener('click', closeModal);
-
-    // Event listener for closing the modal by clicking outside of it
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            closeModal(); // Hide the modal
-        }
-    });
-}
-
-
-
 async function fetchModalDataById(id) {
     try {
         const response = await fetch(api + id); // Fetch data from the API using the provided ID
@@ -137,6 +102,38 @@ async function fetchModalDataById(id) {
     }
 }
 
+function openModal(id) {
+    // Get the modal element
+    const modal = document.getElementById('modal');
+    modal.style.display = 'block'; // Show the modal
+
+    // Store the current scroll position
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+    // Get the close buttons
+    const closeButton = document.getElementById('close-modal-btn');
+
+    // Fetch modal data by id
+    fetchModalDataById(id);
+
+    // Function to close the modal
+    const closeModal = () => {
+        modal.style.display = 'none'; // Hide the modal
+
+        // Restore the previous scroll position
+        window.scrollTo(0, scrollPosition);
+    };
+
+    // Event listener for the close button
+    closeButton.addEventListener('click', closeModal);
+
+    // Event listener for closing the modal by clicking outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal(); // Hide the modal
+        }
+    });
+}
 
 async function fetchTopRatedFilms() {
     try {
@@ -154,7 +151,6 @@ async function fetchTopRatedFilms() {
         return []; // Return an empty array in case of an error
     }
 }
-
 
 async function fetchMoviesByGenre(genre, page) {
     const url = `${api}?sort_by=-imdb_score&genre=${genre}&page=${page}`;
